@@ -1,0 +1,62 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, 80dlu, 0dlu, 0dlu, 100dlu, labelcompgap, 80dlu, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default"
+			"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+		} ) {
+			name: "this"
+			"$sizePolicy": 1
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "titleLabel"
+				"text": "Polskie Koleje Państwowe"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 20, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 9
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 5
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 6
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buySingleTicketButton"
+				"text": "Kup bilet jednorazowy"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 12
+				"gridY": 9
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buySeasonTicketButton"
+				"text": "Kup bilet okresowy"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 12
+				"gridY": 13
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "myReservationsTicketButton"
+				"text": "Moje rezerwacje"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 12
+				"gridY": 17
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "myTicketsButton"
+				"text": "Moje bilety"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 12
+				"gridY": 21
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 175, 15 )
+			"size": new java.awt.Dimension( 550, 370 )
+		} )
+	}
+}
