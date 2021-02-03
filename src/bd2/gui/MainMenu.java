@@ -75,6 +75,27 @@ public class MainMenu extends JPanel {
                 new SearchMenu(frame);
             }
         });
+        buySeasonTicketButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().removeAll();
+                new SearchMenuOkresowy(frame);
+            }
+        });
+        myReservationsTicketButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().removeAll();
+                new ShowReservations(frame);
+            }
+        });
+        myTicketsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.getContentPane().removeAll();
+                new ShowTickets(frame);
+            }
+        });
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables

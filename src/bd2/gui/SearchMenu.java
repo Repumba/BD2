@@ -12,6 +12,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
+import java.util.List;
 import javax.swing.*;
 
 import bd2.gui.db.connection.DbManager;
@@ -179,7 +180,19 @@ public class SearchMenu extends JPanel {
             return;
         }
         GregorianCalendar date = new GregorianCalendar(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day), Integer.parseInt(hour), Integer.parseInt(minutes));
-        manager.getRides(startStation, endStation, isDeparture, date);
+
+        List<String> trasa = null;
+        try {
+            trasa = manager.getRides(startStation, endStation, isDeparture, date);
+        } catch (Exception e){
+            //upsi nie udało się
+        }
+
+        if (trasa == null){
+            return;
+        }
+        frame.getContentPane().removeAll();
+        new ShowRoutes(frame, trasa);
 
     }
 

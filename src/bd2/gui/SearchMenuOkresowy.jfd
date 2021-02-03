@@ -1,0 +1,181 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, 3dlu, labelcompgap, 41dlu, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, 4dlu, labelcompgap, 39dlu, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default"
+			"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+		} ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 40, 37 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "titleLabel"
+				"text": "Kup Bilet Okresowy"
+				"font": new java.awt.Font( "Cambria", 1, 30 )
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridWidth": 55
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "startStationLabel"
+				"text": "Stacja początkowa"
+				"horizontalAlignment": 0
+				"labelFor": new FormReference( "startStationComboBox" )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 13
+				"gridY": 5
+				"gridWidth": 11
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "endStationLabel"
+				"text": "Stacja końcowa"
+				"horizontalAlignment": 0
+				"labelFor": new FormReference( "endStationComboBox" )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 5
+				"gridX": 27
+				"gridWidth": 11
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "startStationComboBox"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 13
+				"gridY": 7
+				"gridWidth": 11
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "endStationComboBox"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 27
+				"gridY": 7
+				"gridWidth": 11
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "dayLabel"
+				"text": "Dzień rozpoczęcia"
+				"labelFor": &FormReference0 new FormReference( "dayTextField" )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 14
+				"gridY": 15
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 6
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "monthLabel"
+				"text": "Miesiąc rozpoczęcia"
+				"labelFor": &FormReference1 new FormReference( "monthTextField" )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 25
+				"gridY": 15
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "yearLabel"
+				"text": "Rok rozpoczęcia"
+				"labelFor": &FormReference2 new FormReference( "yearTextField" )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 29
+				"gridY": 15
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "dayTextField"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 15
+				"gridY": 17
+				"gridWidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "monthTextField"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 25
+				"gridY": 17
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "yearTextField"
+				"cursor": &Cursor0 new java.awt.Cursor( 2 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 29
+				"gridY": 17
+				"gridWidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "dayLabel2"
+				"text": "Dzień zakończenia"
+				"labelFor": #FormReference0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 21
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 15
+				"gridWidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "monthLabel2"
+				"text": "Miesiąc zakończenia"
+				"labelFor": #FormReference1
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 21
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 25
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "yearLabel2"
+				"text": "Rok zakończenia"
+				"labelFor": #FormReference2
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 21
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 29
+				"gridWidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "dayTextFieldEnd"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 23
+				"gridX": 15
+				"gridWidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "monthTextFieldEnd"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 23
+				"gridX": 25
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "yearTextFieldEnd"
+				"cursor": #Cursor0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 23
+				"gridX": 29
+				"gridWidth": 5
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "infoLabel"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 19
+				"gridY": 25
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 15
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buyButton"
+				"text": "Kup bilet"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+				"horizontalTextPosition": 0
+				"minimumSize": new java.awt.Dimension( 117, 30 )
+				"maximumSize": new java.awt.Dimension( 117, 30 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 25
+				"gridY": 29
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 425, 35 )
+			"size": new java.awt.Dimension( 715, 490 )
+		} )
+	}
+}

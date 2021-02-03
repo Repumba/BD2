@@ -1,0 +1,89 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, 80dlu, 0dlu, 0dlu, 100dlu, labelcompgap, 80dlu, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default"
+			"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+		} ) {
+			name: "this"
+			"$sizePolicy": 1
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "titleLabel"
+				"text": "Twoje Bilety"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 20, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 9
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 5
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 6
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet1"
+				"text": "Bilet1"
+				"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 131072, 10, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 9
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 9
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet1_info"
+				"text": "Bilet1"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 9
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 14
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet2"
+				"text": "Bilet2"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 13
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 9
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet2_info"
+				"text": "Bilet1"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 13
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 14
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet3"
+				"text": "Bilet3"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 17
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 9
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet3_info"
+				"text": "Bilet1"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 17
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 14
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 175, 15 )
+			"size": new java.awt.Dimension( 550, 370 )
+		} )
+	}
+}
