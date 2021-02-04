@@ -32,12 +32,16 @@ public class DbManager {
     }
 
     public List<String> getTickets() throws SQLException {
-        PreparedStatement st = con.prepareStatement("SELECT * FROM bilet_jednorazowy JOIN przejazd ON bilet_jednorazowy.id_przejazdu=przejazd.id_przejazdu");
+        PreparedStatement st = con.prepareStatement("SELECT * FROM bilet_jednorazowy JOIN przejazd ON bilet_jednorazowy.przejazd_id_przejazdu=przejazd.id_przejazdu");
 
         List<String> result = new ArrayList<>();
         ResultSet rs = st.executeQuery();
         while(rs.next()) {
-            result.add(rs.getString(2)); //wziac dzien przejazdu, stacje poczatkowa, koncowa, numer miejsca i wagonu - zapisac wszystko jako string w 1 tablicy, w tej kolejnosci
+            result.add(rs.getString("data")); //wziac dzien przejazdu, stacje poczatkowa, koncowa, numer miejsca i wagonu - zapisac wszystko jako string w 1 tablicy, w tej kolejnosci
+            result.add(rs.getString("stacja_poczatkowa"));
+            result.add(rs.getString("stacja_koncowa"));
+            result.add(rs.getString("miejsce_numer_miejsca"));
+            result.add(rs.getString("miejsce_wagon_numer_wagonu"));
         }
 
         st.close();
@@ -46,12 +50,13 @@ public class DbManager {
     }
 
     public List<String> getReservations() throws SQLException {
-        PreparedStatement st = con.prepareStatement("SELECT * FROM zamowienie WHERE stan_zamowienia= ____REZERWACJA____");
+        PreparedStatement st = con.prepareStatement("SELECT * FROM zamowienie");
 
         List<String> result = new ArrayList<>();
         ResultSet rs = st.executeQuery();
         while(rs.next()) {
-            result.add(rs.getString(2)); //wziac id_zamowienia i kwote - zapisac wszystko jako string w 1 tablicy, w tej kolejnosci
+            result.add(rs.getString("id_zamowienia"));
+            result.add(rs.getString("kwota"));//wziac id_zamowienia i kwote - zapisac wszystko jako string w 1 tablicy, w tej kolejnosci
         }
 
         st.close();
@@ -60,12 +65,12 @@ public class DbManager {
     }
 
     public List<String> getPosrednicy() throws SQLException {
-        PreparedStatement st = con.prepareStatement("SELECT * FROM posrednicy_platnosci");
+        PreparedStatement st = con.prepareStatement("SELECT nazwa FROM posrednik_platnosci NATURAL JOIN nazwa_posrednika_platnosci");
 
         List<String> result = new ArrayList<>();
         ResultSet rs = st.executeQuery();
         while(rs.next()) {
-            result.add(rs.getString(2)); //wziac tylko nazwy posrednikow
+            result.add(rs.getString("nazwa")); //wziac tylko nazwy posrednikow
         }
 
         st.close();
@@ -74,11 +79,13 @@ public class DbManager {
     }
 
     public List<String> getRides(String startStation, String endStation, boolean isDeparture, GregorianCalendar date) throws SQLException {
-        PreparedStatement st = con.prepareStatement("SELECT * FROM przystanek JOIN stacja ON przystanek.id_stacji=stacja.id_stacji");
+        PreparedStatement st = con.prepareStatement("SELECT * FROM przystanek JOIN stacja ON przystanek.stacja_id_stacji=stacja.id_stacji");
         List<String> result = new ArrayList<>();
         ResultSet rs = st.executeQuery();
         while(rs.next()) {
-            result.add(rs.getString(2)); //wziac id_przejazdu, nazwe stacji, date -> w tej kolejności
+            result.add(rs.getString("id_przejazdu"));
+            result.add(rs.getString("nazwa_stacji"));//wziac id_przejazdu, nazwe stacji, date -> w tej kolejności
+            result.add(rs.getString("data"));
         }
 
         st.close();

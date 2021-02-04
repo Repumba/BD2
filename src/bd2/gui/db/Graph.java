@@ -1,3 +1,5 @@
+package bd2.gui.db;
+
 import java.util.*;
 import java.lang.Math;
 

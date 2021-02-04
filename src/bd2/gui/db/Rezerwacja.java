@@ -1,4 +1,4 @@
-/**
+package bd2.gui.db; /**
  * 
  */
 

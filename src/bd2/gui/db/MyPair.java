@@ -1,3 +1,5 @@
+package bd2.gui.db;
+
 public class MyPair{
     long key;
     int val;
