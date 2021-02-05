@@ -11,7 +11,7 @@ new FormModel {
 			"minimumSize": new java.awt.Dimension( 40, 37 )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "titleLabel"
-				"text": "Wyszukiwanie połączeń"
+				"text": "Kup Bilet Okresowy"
 				"font": new java.awt.Font( "Cambria", 1, 30 )
 				"horizontalAlignment": 0
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
@@ -23,9 +23,9 @@ new FormModel {
 				"horizontalAlignment": 0
 				"labelFor": new FormReference( "startStationComboBox" )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 15
+				"gridX": 13
 				"gridY": 5
-				"gridWidth": 9
+				"gridWidth": 11
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "endStationLabel"
@@ -35,7 +35,7 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridY": 5
 				"gridX": 27
-				"gridWidth": 8
+				"gridWidth": 11
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
 				name: "startStationComboBox"
@@ -51,33 +51,20 @@ new FormModel {
 				"gridY": 7
 				"gridWidth": 11
 			} )
-			add( new FormComponent( "javax.swing.JRadioButton" ) {
-				name: "departureRadioButton"
-				"text": "Odjazd"
-			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 25
-				"gridY": 9
-			} )
-			add( new FormComponent( "javax.swing.JRadioButton" ) {
-				name: "arrivalRadioButton"
-				"text": "Przyjazd"
-			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 25
-				"gridY": 11
-			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "dayLabel"
-				"text": "Dzień"
-				"labelFor": new FormReference( "dayTextField" )
+				"text": "Dzień rozpoczęcia"
+				"labelFor": &FormReference0 new FormReference( "dayTextField" )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 19
+				"gridX": 14
 				"gridY": 15
 				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 6
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "monthLabel"
-				"text": "Miesiąc"
-				"labelFor": new FormReference( "monthTextField" )
+				"text": "Miesiąc rozpoczęcia"
+				"labelFor": &FormReference1 new FormReference( "monthTextField" )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridX": 25
 				"gridY": 15
@@ -85,18 +72,20 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "yearLabel"
-				"text": "Rok"
-				"labelFor": new FormReference( "yearTextField" )
+				"text": "Rok rozpoczęcia"
+				"labelFor": &FormReference2 new FormReference( "yearTextField" )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 33
+				"gridX": 29
 				"gridY": 15
 				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 5
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "dayTextField"
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 19
+				"gridX": 15
 				"gridY": 17
+				"gridWidth": 5
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "monthTextField"
@@ -106,39 +95,61 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "yearTextField"
-				"cursor": new java.awt.Cursor( 2 )
+				"cursor": &Cursor0 new java.awt.Cursor( 2 )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 33
+				"gridX": 29
 				"gridY": 17
+				"gridWidth": 5
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "hourLabel"
-				"text": "Godzina"
-				"labelFor": new FormReference( "hourTextField" )
+				name: "dayLabel2"
+				"text": "Dzień zakończenia"
+				"labelFor": #FormReference0
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 23
 				"gridY": 21
 				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 15
+				"gridWidth": 5
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "minLabel"
-				"text": "Minuty"
-				"labelFor": new FormReference( "minTextField" )
+				name: "monthLabel2"
+				"text": "Miesiąc zakończenia"
+				"labelFor": #FormReference1
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 27
 				"gridY": 21
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 25
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "yearLabel2"
+				"text": "Rok zakończenia"
+				"labelFor": #FormReference2
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 21
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 29
+				"gridWidth": 5
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "hourTextField"
+				name: "dayTextFieldEnd"
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 23
 				"gridY": 23
+				"gridX": 15
+				"gridWidth": 5
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "minTextField"
+				name: "monthTextFieldEnd"
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 27
 				"gridY": 23
+				"gridX": 25
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "yearTextFieldEnd"
+				"cursor": #Cursor0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 23
+				"gridX": 29
+				"gridWidth": 5
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "infoLabel"
@@ -150,15 +161,15 @@ new FormModel {
 				"gridWidth": 15
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "searchButton"
-				"text": "Szukaj połączeń"
+				name: "buyButton"
+				"text": "Kup bilet"
 				"background": new java.awt.Color( 255, 128, 0, 255 )
 				"horizontalTextPosition": 0
 				"minimumSize": new java.awt.Dimension( 117, 30 )
 				"maximumSize": new java.awt.Dimension( 117, 30 )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridX": 25
-				"gridY": 27
+				"gridY": 29
 				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
 				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
 			} )

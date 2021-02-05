@@ -1,4 +1,4 @@
-
+package bd2.gui.db;
 /**
  * 
  */
@@ -12,7 +12,14 @@ import java.util.GregorianCalendar;
  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
  */
 public class BiletOkresowy extends Bilet {
-	/** 
+	public BiletOkresowy(GregorianCalendar waznyOd, GregorianCalendar waznyDo, String stacjaPoczatkowa, String stacjaKoncowa) {
+		this.waznyOd = waznyOd;
+		this.waznyDo = waznyDo;
+		this.stacjaPoczatkowa = stacjaPoczatkowa;
+		this.stacjaKoncowa = stacjaKoncowa;
+	}
+
+	/**
 	* <!-- begin-UML-doc -->
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
@@ -71,13 +78,13 @@ public class BiletOkresowy extends Bilet {
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private Stacja stacjaPoczatkowa;
+	private String stacjaPoczatkowa;
 
 	/** 
 	* @return the stacjaPoczatkowa
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public Stacja getStacjaPoczatkowa() {
+	public String getStacjaPoczatkowa() {
 		// begin-user-code
 		return stacjaPoczatkowa;
 		// end-user-code
@@ -87,7 +94,7 @@ public class BiletOkresowy extends Bilet {
 	* @param stacjaPoczatkowa the stacjaPoczatkowa to set
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public void setStacjaPoczatkowa(Stacja stacjaPoczatkowa) {
+	public void setStacjaPoczatkowa(String stacjaPoczatkowa) {
 		// begin-user-code
 		this.stacjaPoczatkowa = stacjaPoczatkowa;
 		// end-user-code
@@ -98,13 +105,13 @@ public class BiletOkresowy extends Bilet {
 	* <!-- end-UML-doc -->
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	private Stacja stacjaKoncowa;
+	private String stacjaKoncowa;
 
 	/** 
 	* @return the stacjaKoncowa
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public Stacja getStacjaKoncowa() {
+	public String getStacjaKoncowa() {
 		// begin-user-code
 		return stacjaKoncowa;
 		// end-user-code
@@ -114,7 +121,7 @@ public class BiletOkresowy extends Bilet {
 	* @param stacjaKoncowa the stacjaKoncowa to set
 	* @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
 	*/
-	public void setStacjaKoncowa(Stacja stacjaKoncowa) {
+	public void setStacjaKoncowa(String stacjaKoncowa) {
 		// begin-user-code
 		this.stacjaKoncowa = stacjaKoncowa;
 		// end-user-code

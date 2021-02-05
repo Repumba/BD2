@@ -1,0 +1,128 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, 80dlu, 0dlu, 0dlu, 100dlu, labelcompgap, 80dlu, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default"
+			"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+		} ) {
+			name: "this"
+			"$sizePolicy": 1
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "titleLabel"
+				"text": "Twoje Bilety"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 20, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 11
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 5
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 6
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet1"
+				"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 131072, 0, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 9
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 11
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet1_info"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131072, 0, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 9
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 16
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet1_2"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 11
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 11
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet2"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131072, 0, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 13
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 11
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet2_info"
+				"font": &SwingDerivedFont1 new com.jformdesigner.model.SwingDerivedFont( null, 131072, 10, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 13
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 16
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet2_2"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 15
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 11
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet3"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131072, 0, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 17
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 11
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet3_info"
+				"font": #SwingDerivedFont1
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 17
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 16
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Bilet3_2"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 19
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints LEFT
+				"gridX": 11
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Powrót"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+				"horizontalTextPosition": 0
+				"minimumSize": new java.awt.Dimension( 117, 30 )
+				"maximumSize": new java.awt.Dimension( 117, 30 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 25
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 14
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 175, 15 )
+			"size": new java.awt.Dimension( 550, 370 )
+		} )
+	}
+}

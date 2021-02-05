@@ -1,0 +1,70 @@
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, 3dlu, labelcompgap, 41dlu, labelcompgap, default, labelcompgap, 0dlu, labelcompgap, 127dlu, labelcompgap, default, labelcompgap, default, labelcompgap, 4dlu, labelcompgap, 39dlu, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default, labelcompgap, default"
+			"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+		} ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 40, 1000 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "dayLabel"
+				"text": "Wybierz pośrednika płatności"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 12, false )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 7
+				"gridY": 3
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 27
+				"gridHeight": 13
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "payProviderComboBox"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 21
+				"gridY": 19
+				"gridWidth": 12
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "infoLabel"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 19
+				"gridY": 25
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridWidth": 15
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "payButton"
+				"text": "Zapłać"
+				"background": &Color0 new java.awt.Color( 255, 128, 0, 255 )
+				"horizontalTextPosition": 0
+				"minimumSize": &Dimension0 new java.awt.Dimension( 117, 30 )
+				"maximumSize": &Dimension1 new java.awt.Dimension( 117, 30 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 25
+				"gridY": 27
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Powrót"
+				"background": #Color0
+				"horizontalTextPosition": 0
+				"minimumSize": #Dimension0
+				"maximumSize": #Dimension1
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 31
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 25
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 425, 35 )
+			"size": new java.awt.Dimension( 915, 585 )
+		} )
+	}
+}
