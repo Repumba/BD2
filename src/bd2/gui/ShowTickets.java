@@ -5,6 +5,8 @@
 package bd2.gui;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +25,7 @@ public class ShowTickets extends JPanel {
     private List<String> dane = new ArrayList<>();
 
     public ShowTickets(JFrame frame) {
+        frame.getContentPane().removeAll();
         manager = new DbManager();
         this.frame = frame;
         initComponents();
@@ -53,13 +56,16 @@ public class ShowTickets extends JPanel {
         Bilet3 = new JLabel();
         Bilet3_info = new JLabel();
         Bilet3_2 = new JLabel();
+        button1 = new JButton();
 
         //======== this ========
-        setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder( 0
-        , 0, 0, 0) , "JFor\u006dDesi\u0067ner \u0045valu\u0061tion", javax. swing. border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM
-        , new java .awt .Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt. Color. red) ,
-         getBorder( )) );  addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e
-        ) {if ("bord\u0065r" .equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
+        setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax .
+        swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frm\u0044es\u0069gn\u0065r \u0045va\u006cua\u0074io\u006e" , javax. swing .border
+        . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM, new java. awt .Font ( "D\u0069al\u006fg"
+        , java .awt . Font. BOLD ,12 ) ,java . awt. Color .red ) , getBorder
+        () ) );  addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override public void propertyChange (java
+        . beans. PropertyChangeEvent e) { if( "\u0062or\u0064er" .equals ( e. getPropertyName () ) )throw new RuntimeException
+        ( ) ;} } );
         setLayout(new FormLayout(
             "5*(default, $lcgap), 80dlu, 2*(0dlu), 100dlu, $lcgap, 80dlu, 9*($lcgap, default)",
             "29*(default, $lgap), default"));
@@ -104,6 +110,14 @@ public class ShowTickets extends JPanel {
         //---- Bilet3_2 ----
         Bilet3_2.setFont(Bilet3_2.getFont().deriveFont(Bilet3_2.getFont().getStyle() & ~Font.ITALIC));
         add(Bilet3_2, CC.xywh(11, 19, 4, 1, CC.LEFT, CC.CENTER));
+
+        //---- button1 ----
+        button1.setText("Powr\u00f3t");
+        button1.setBackground(new Color(255, 128, 0));
+        button1.setHorizontalTextPosition(SwingConstants.CENTER);
+        button1.setMinimumSize(new Dimension(117, 30));
+        button1.setMaximumSize(new Dimension(117, 30));
+        add(button1, CC.xy(14, 25, CC.CENTER, CC.CENTER));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
 
         if (dane.size() > 0) {
@@ -131,6 +145,13 @@ public class ShowTickets extends JPanel {
             Bilet3_info.setText("Miejsce: " + dane.get(13) + " Wagon: " + dane.get(14));
         }
 
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu(frame);
+            }
+        });
+
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
@@ -145,5 +166,6 @@ public class ShowTickets extends JPanel {
     private JLabel Bilet3;
     private JLabel Bilet3_info;
     private JLabel Bilet3_2;
+    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

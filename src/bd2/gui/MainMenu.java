@@ -17,6 +17,7 @@ import com.jgoodies.forms.layout.*;
 public class MainMenu extends JPanel {
     private JFrame frame;
     public MainMenu(JFrame frame) {
+        frame.getContentPane().removeAll();
         this.frame = frame;
         initComponents();
         frame.add(this);

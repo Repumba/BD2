@@ -11,7 +11,7 @@ import java.sql.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.GregorianCalendar;
+import java.util.Date;
 import java.util.List;
 import javax.swing.*;
 
@@ -27,6 +27,7 @@ public class SearchMenu extends JPanel {
     private DbManager manager;
 
     public SearchMenu(JFrame frame) {
+        frame.getContentPane().removeAll();
         manager = new DbManager();
         this.frame = frame;
         initComponents();
@@ -57,15 +58,17 @@ public class SearchMenu extends JPanel {
         minTextField = new JTextField();
         infoLabel = new JLabel();
         searchButton = new JButton();
+        button1 = new JButton();
 
         //======== this ========
         setMinimumSize(new Dimension(40, 37));
-        setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border
-        .EmptyBorder(0,0,0,0), "JFor\u006dDesi\u0067ner \u0045valu\u0061tion",javax.swing.border.TitledBorder.CENTER,javax
-        .swing.border.TitledBorder.BOTTOM,new java.awt.Font("Dia\u006cog",java.awt.Font.BOLD,
-        12),java.awt.Color.red), getBorder())); addPropertyChangeListener(new java.beans
-        .PropertyChangeListener(){@Override public void propertyChange(java.beans.PropertyChangeEvent e){if("bord\u0065r".equals(e.
-        getPropertyName()))throw new RuntimeException();}});
+        setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new
+        javax. swing. border. EmptyBorder( 0, 0, 0, 0) , "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn", javax
+        . swing. border. TitledBorder. CENTER, javax. swing. border. TitledBorder. BOTTOM, new java
+        .awt .Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt
+        . Color. red) , getBorder( )) );  addPropertyChangeListener (new java. beans.
+        PropertyChangeListener( ){ @Override public void propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062ord\u0065r" .
+        equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
         setLayout(new FormLayout(
             "8*(default, $lcgap), 3dlu, $lcgap, 41dlu, 5*($lcgap, default), $lcgap, 4dlu, $lcgap, 39dlu, 11*($lcgap, default)",
             "20*(default, $lgap), default"));
@@ -139,6 +142,14 @@ public class SearchMenu extends JPanel {
         searchButton.setMinimumSize(new Dimension(117, 30));
         searchButton.setMaximumSize(new Dimension(117, 30));
         add(searchButton, CC.xy(25, 27, CC.CENTER, CC.CENTER));
+
+        //---- button1 ----
+        button1.setText("Powr\u00f3t");
+        button1.setBackground(new Color(255, 128, 0));
+        button1.setHorizontalTextPosition(SwingConstants.CENTER);
+        button1.setMinimumSize(new Dimension(117, 30));
+        button1.setMaximumSize(new Dimension(117, 30));
+        add(button1, CC.xy(25, 33, CC.CENTER, CC.CENTER));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
 
 
@@ -155,6 +166,14 @@ public class SearchMenu extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 checkAndSendRequest();
+            }
+        });
+
+        button1.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu(frame);
             }
         });
 
@@ -179,17 +198,23 @@ public class SearchMenu extends JPanel {
             infoLabel.setText("Błędna data");
             return;
         }
-        GregorianCalendar date = new GregorianCalendar(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day), Integer.parseInt(hour), Integer.parseInt(minutes));
-
+        //GregorianCalendar date = new GregorianCalendar(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day), Integer.parseInt(hour), Integer.parseInt(minutes));
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        Date date = null;
+        try {
+            date = df.parse(year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + "00");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         List<String> trasa = null;
         try {
             trasa = manager.getRides(startStation, endStation, isDeparture, date);
         } catch (Exception e){
-            //upsi nie udało się
+            e.printStackTrace();     // nie udało się
         }
 
         if (trasa == null){
-            return;
+            System.out.println("Trasa null");
         }
         frame.getContentPane().removeAll();
         new ShowRoutes(frame, trasa);
@@ -233,5 +258,6 @@ public class SearchMenu extends JPanel {
     private JTextField minTextField;
     private JLabel infoLabel;
     private JButton searchButton;
+    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

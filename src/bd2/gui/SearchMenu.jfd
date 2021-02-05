@@ -162,6 +162,19 @@ new FormModel {
 				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
 				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Powrót"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+				"horizontalTextPosition": 0
+				"minimumSize": new java.awt.Dimension( 117, 30 )
+				"maximumSize": new java.awt.Dimension( 117, 30 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 33
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 25
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 425, 35 )
 			"size": new java.awt.Dimension( 715, 490 )

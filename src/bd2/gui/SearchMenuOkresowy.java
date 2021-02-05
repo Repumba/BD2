@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 import javax.swing.*;
 
+import bd2.gui.db.BiletOkresowy;
 import bd2.gui.db.connection.DbManager;
 import com.jgoodies.forms.factories.*;
 import com.jgoodies.forms.layout.*;
@@ -40,7 +41,7 @@ public class SearchMenuOkresowy extends JPanel {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Tomasz Trzeciak
+        // Generated using JFormDesigner Evaluation license - Tymoteusz Perka
         titleLabel = new JLabel();
         startStationLabel = new JLabel();
         endStationLabel = new JLabel();
@@ -60,14 +61,17 @@ public class SearchMenuOkresowy extends JPanel {
         yearTextFieldEnd = new JTextField();
         infoLabel = new JLabel();
         buyButton = new JButton();
+        button1 = new JButton();
 
         //======== this ========
         setMinimumSize(new Dimension(40, 37));
-        setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder(
-        0, 0, 0, 0) , "JFor\u006dDesi\u0067ner \u0045valu\u0061tion", javax. swing. border. TitledBorder. CENTER, javax. swing. border. TitledBorder
-        . BOTTOM, new java .awt .Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt. Color.
-        red) , getBorder( )) );  addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void propertyChange (java .
-        beans .PropertyChangeEvent e) {if ("bord\u0065r" .equals (e .getPropertyName () )) throw new RuntimeException( ); }} );
+        setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax
+        . swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn" , javax. swing
+        .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM, new java. awt .
+        Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 ) ,java . awt. Color .red
+        ) , getBorder () ) );  addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override
+        public void propertyChange (java . beans. PropertyChangeEvent e) { if( "\u0062ord\u0065r" .equals ( e. getPropertyName (
+        ) ) )throw new RuntimeException( ) ;} } );
         setLayout(new FormLayout(
             "8*(default, $lcgap), 3dlu, $lcgap, 41dlu, 5*($lcgap, default), $lcgap, 4dlu, $lcgap, 39dlu, 11*($lcgap, default)",
             "20*(default, $lgap), default"));
@@ -142,6 +146,14 @@ public class SearchMenuOkresowy extends JPanel {
         buyButton.setMinimumSize(new Dimension(117, 30));
         buyButton.setMaximumSize(new Dimension(117, 30));
         add(buyButton, CC.xy(25, 29, CC.CENTER, CC.CENTER));
+
+        //---- button1 ----
+        button1.setText("Powr\u00f3t");
+        button1.setBackground(new Color(255, 128, 0));
+        button1.setHorizontalTextPosition(SwingConstants.CENTER);
+        button1.setMinimumSize(new Dimension(117, 30));
+        button1.setMaximumSize(new Dimension(117, 30));
+        add(button1, CC.xy(25, 33, CC.CENTER, CC.CENTER));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
 
         try {
@@ -152,6 +164,12 @@ public class SearchMenuOkresowy extends JPanel {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu(frame);
+            }
+        });
 
         buyButton.addActionListener(new ActionListener() {
             @Override
@@ -182,8 +200,9 @@ public class SearchMenuOkresowy extends JPanel {
             infoLabel.setText("Data końca musi być większa od daty początku");
             return;
         }
+        BiletOkresowy bilet = new BiletOkresowy(date, dateEnd, startStation, endStation);
         frame.getContentPane().removeAll();
-        new WybierzPosrednika(frame);
+        new WybierzPosrednika(frame, bilet);
     }
 
     private boolean validateDate(String day, String month, String year) {
@@ -197,13 +216,9 @@ public class SearchMenuOkresowy extends JPanel {
         }
         return true;
     }
-    private boolean validateTime(String hour, String minutes) {
-        String time = hour + ":" + minutes;
-        return time.matches("([01]?[0-9]|2[0-3]):[0-5][0-9]");
-    }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Tomasz Trzeciak
+    // Generated using JFormDesigner Evaluation license - Tymoteusz Perka
     private JLabel titleLabel;
     private JLabel startStationLabel;
     private JLabel endStationLabel;
@@ -223,5 +238,6 @@ public class SearchMenuOkresowy extends JPanel {
     private JTextField yearTextFieldEnd;
     private JLabel infoLabel;
     private JButton buyButton;
+    private JButton button1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

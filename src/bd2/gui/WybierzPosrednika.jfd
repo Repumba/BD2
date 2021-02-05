@@ -21,7 +21,7 @@ new FormModel {
 				"gridHeight": 13
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
-				name: "startStationComboBox"
+				name: "payProviderComboBox"
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridX": 21
 				"gridY": 19
@@ -37,17 +37,30 @@ new FormModel {
 				"gridWidth": 15
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "searchButton"
+				name: "payButton"
 				"text": "Zapłać"
-				"background": new java.awt.Color( 255, 128, 0, 255 )
+				"background": &Color0 new java.awt.Color( 255, 128, 0, 255 )
 				"horizontalTextPosition": 0
-				"minimumSize": new java.awt.Dimension( 117, 30 )
-				"maximumSize": new java.awt.Dimension( 117, 30 )
+				"minimumSize": &Dimension0 new java.awt.Dimension( 117, 30 )
+				"maximumSize": &Dimension1 new java.awt.Dimension( 117, 30 )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridX": 25
 				"gridY": 27
 				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
 				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Powrót"
+				"background": #Color0
+				"horizontalTextPosition": 0
+				"minimumSize": #Dimension0
+				"maximumSize": #Dimension1
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 31
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 25
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 425, 35 )

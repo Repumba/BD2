@@ -1,4 +1,4 @@
-JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.9.1" encoding: "UTF-8"
+JFDML JFormDesigner: "7.0.3.0.337" Java: "11.0.8" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
@@ -11,7 +11,7 @@ new FormModel {
 			"$sizePolicy": 1
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "titleLabel"
-				"text": "Twoje Rezerwacje"
+				"text": "Najbliższe połączenie"
 				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 20, false )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridX": 9
@@ -22,8 +22,8 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "Trasa1"
-				"text": "Trasa1"
-				"font": new com.jformdesigner.model.SwingDerivedFont( null, 131072, 10, false )
+				"text": "Nie znaleziono"
+				"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 131072, 10, false )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
 				"gridY": 9
@@ -31,19 +31,46 @@ new FormModel {
 				"gridX": 9
 				"gridWidth": 6
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "Trasa2"
+				"font": #SwingDerivedFont0
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridY": 11
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 9
+				"gridWidth": 6
+			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "buyButton"
 				"text": "Kup"
+				"background": &Color0 new java.awt.Color( 255, 128, 0, 255 )
+				"visible": false
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 9
 				"gridY": 17
+				"gridX": 9
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "reserveButton"
-				"text": "Rezerwuj"
+				"text": "Zarezerwuj"
+				"background": #Color0
+				"visible": false
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 14
 				"gridY": 17
+				"gridX": 14
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Powrót"
+				"background": new java.awt.Color( 255, 128, 0, 255 )
+				"horizontalTextPosition": 0
+				"minimumSize": new java.awt.Dimension( 117, 30 )
+				"maximumSize": new java.awt.Dimension( 117, 30 )
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 25
+				"hAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"vAlign": sfield com.jgoodies.forms.layout.CellConstraints CENTER
+				"gridX": 12
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 175, 15 )
