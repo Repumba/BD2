@@ -59,6 +59,24 @@ public class DbManager {
         return result;
     }
 
+    public List<String> getTicketsOkresowy() throws SQLException {
+        PreparedStatement st = con.prepareStatement("SELECT * FROM bilet_jednorazowy JOIN przejazd ON bilet_jednorazowy.przejazd_id_przejazdu=przejazd.id_przejazdu");
+
+        List<String> result = new ArrayList<>();
+        ResultSet rs = st.executeQuery();
+        while(rs.next()) {
+            result.add("null");
+            result.add(rs.getString("stacja_poczatkowa"));
+            result.add(rs.getString("stacja_koncowa"));
+            result.add(rs.getString("miejsce_numer_miejsca")); //poczatek okresu biletu
+            result.add(rs.getString("miejsce_wagon_numer_wagonu")); //koniec okresu biletu
+        }
+
+        st.close();
+        rs.close();
+        return result;
+    }
+
     public List<String> getReservations() throws SQLException {
         PreparedStatement st = con.prepareStatement("SELECT * FROM zamowienie");
 
